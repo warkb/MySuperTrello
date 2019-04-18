@@ -1,0 +1,30 @@
+.list-tasks {
+	background-color: #dfe3e6;
+	box-sizing: border-box;
+	flex-basis: 250px;
+    flex-grow: 0;
+    flex-shrink: 0;
+	border-radius: 5px;
+	margin: 5px;
+	margin-top: 10px;
+    margin-bottom: 20px;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.list-tasks> .add-cards {
+	background-color: #dfe3e6;
+	color: #6b808c;
+	font-family: Helvetica;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.list-tasks .add-cards:hover {
+	background-color: rgba(9,45,66,.13);
+    color: #17394d;
+}
+
+.list-tasks > .wrapper {
+	padding: 10px;
+}
