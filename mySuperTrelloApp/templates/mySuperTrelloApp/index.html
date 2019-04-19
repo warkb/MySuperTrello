@@ -1,16 +1,22 @@
+{% load staticfiles %}
+{#https://github.com/vechnoe/clinic#}
+{#Кароч#}
+{#http://toly.github.io/blog/2014/03/08/tutorial-using-angularjs-with-django/#}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
 <head>
     <meta charset="UTF-8">
     <title>MySuperTrello</title>
-    <link rel="stylesheet" href="../static/css/main.css">
-    <link rel="stylesheet" href="../static/css/lists.css">
-    <link rel="stylesheet" href="../static/css/cards.css">
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
+    <link rel="stylesheet" href="{% static "css/lists.css" %}">
+    <link rel="stylesheet" href="{% static "css/cards.css" %}">
+    <link rel="stylesheet" href="{% static "angular/app/lib/bootstrap/dist/css/bootstrap.css" %}">
+    <script src="{% static "angular/app/lib/angular/angular.js" %}"></script>
 </head>
 <body>
 <header>
     <h1>MySuperTrello</h1>
-    <h2>only the most necessary</h2>
+    <h2>как </h2>
 </header>
 <div class="content">
     {% for list in lists %}
