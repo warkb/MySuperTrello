@@ -1,6 +1,6 @@
 @font-face {
     font-family: ThirstyScriptLight; /* Гарнитура шрифта */
-	src: url("../fonts/ThirstyScriptLight.ttf"); /* Путь к файлу со шрифтом */
+	src: url("fonts/ThirstyScriptLight.ttf"); /* Путь к файлу со шрифтом */
 }
 
 html {
@@ -37,7 +37,7 @@ h2 {
 .content {
 	box-sizing: border-box;
 	display: flex;
-    padding-top: 100px;
+	padding: 100px 20px;
 }
 
 h3 {

@@ -1,22 +1,12 @@
-var app = angular.module('Trello', [
-    'ui.router',
-    'restangular'
-])
+var Trello = angular.module('Trello', ["ngRoute"]);
 
-app.config(function ($stateProvider, $urlRouterProvider, RestangularProvider) {
-    // For any unmatched url, send to /route1
-    $urlRouterProvider.otherwise("/");
-    $stateProvider
-        .state('index', {
+Trello.config(['$routeProvider', function ($routeProvider){
+    $routeProvider.when('/index', {
+        templateUrl: 'static/angular/app/html/_main.html',
+        controller: 'IndexController'
+    });
+}]);
 
-            url: "/",
-            templateUrl: "html/_main.html",
-            controller: "Mainpage"
-        })
-})
-
-app.controller("Mainpage", ['$scope', 'Restangular', 'CbgenRestangular', '$q',
-function ($scope, Restangular, CbgenRestangular, $q) {
-
-
-}])// end controller
+Trello.controller('IndexController', function IndexController($scope) {
+    console.log('IndexController');
+});

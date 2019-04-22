@@ -1,19 +1,15 @@
 <header>
     <h1>MySuperTrello</h1>
-    <h2>как </h2>
+    <h2>only the most necessary</h2>
 </header>
 <div class="content">
-    {% for list in lists %}
-        <div class="list-tasks">
-            <div class="wrapper">
-                <h3>{{ list.name }}</h3>
-                {% for card_text in list.list %}
-                    <div class="card">
-                        {{ card_text }}
-                    </div>
-                {% endfor %}
-            </div>
-            <div class="add-cards">Добавить ещё одну карточку</div>
+    <div class="list-tasks">
+        <div class="wrapper">
+            <h3>Название списка</h3>
+                <div class="card">
+                    название карточки
+                </div>
         </div>
-    {% endfor %}
+        <div class="add-cards">Добавить ещё одну карточку</div>
+    </div>
 </div>
