@@ -2,12 +2,12 @@
     <h1>MySuperTrello</h1>
     <h2>only the most necessary</h2>
 </header>
-<div class="content">
-    <div class="list-tasks">
+<div class="content" ng-controller="IndexController">
+    <div class="list-tasks" ng-repeat="desc in descs">
         <div class="wrapper">
-            <h3>Название списка</h3>
-                <div class="card">
-                    название карточки
+            <h3>{{ desc.name }}</h3>
+                <div class="card" ng-repeat="card in desc.cards">
+                    {{ card.text }}
                 </div>
         </div>
         <div class="add-cards">Добавить ещё одну карточку</div>
