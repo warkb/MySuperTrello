@@ -12,6 +12,7 @@ class Desc(models.Model):
     class Meta:
         verbose_name = 'Доска'
         verbose_name_plural = 'Доски'
+        app_label = 'mySuperTrelloApp'
 
 class Card(models.Model):
     text = models.TextField(help_text='Позиция на доске')
@@ -25,3 +26,4 @@ class Card(models.Model):
     class Meta:
         verbose_name = 'Карточка'
         verbose_name_plural = 'Карточки'
+        app_label = 'mySuperTrelloApp'

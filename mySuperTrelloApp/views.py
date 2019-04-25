@@ -8,8 +8,11 @@ from .models import *
 # Create your views here.
 def mainpage(request):
     template = loader.get_template('mySuperTrelloApp/index.html')
+    context = {}
+    return HttpResponse(template.render(context, request))
 
-    # делаем Json с досками и карточками из них
+def get_descs(request):
+    """Возвращает данные о досках и карточках в формате JSON"""
     descs = Desc.objects.all()
     descsJson = []
     for desc in descs:
@@ -18,7 +21,5 @@ def mainpage(request):
         cards = [{'text': card.text, 'position': card.position} for card in desc.card_set.all()]
         descJson['cards'] = cards
         descsJson.append(descJson)
-    context = {
-        'descsJson': json.dumps(descsJson, ensure_ascii=False)
-    }
-    return HttpResponse(template.render(context, request))
+
+    return HttpResponse(json.dumps(descsJson, ensure_ascii=False), content_type='application/json')

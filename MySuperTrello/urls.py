@@ -17,7 +17,10 @@ from django.contrib import admin
 from django.urls import path, include
 from mySuperTrelloApp import urls
 
+app_name = 'mySuperTrelloApp'
+
 urlpatterns = [
     path('', include('mySuperTrelloApp.urls')),
+    path('tutorialAngularDjango/', include('tutorialAngularDjango.urls')),
     path('admin/', admin.site.urls),
 ]

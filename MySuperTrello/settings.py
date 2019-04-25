@@ -41,6 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mySuperTrelloApp',
+    'tutorialAngularDjango',
+    'tastypie',
+    'djng',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [

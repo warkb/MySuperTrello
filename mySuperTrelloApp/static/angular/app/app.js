@@ -7,8 +7,10 @@ Trello.config(['$routeProvider', function ($routeProvider){
     });
 }]);
 
-Trello.controller('IndexController', function IndexController($scope) {
-    var descsJson = JSON.parse($('#descsJson').attr('value'));
-    console.log(descsJson);
-    $scope.descs = descsJson;
-});
+Trello.controller('IndexController', ['$http', '$scope', function IndexController($http, $scope) {
+    var self = this;
+    $http.get('/get_descs').then(function (response) {
+        console.log(response.data);
+        $scope.descs = response.data;
+    });
+}]);
